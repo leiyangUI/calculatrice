@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    /* color: black; */
+    text-align: center;
+}
+
+.calc {
+    background-color: rgba(39, 50, 6, 0.8);
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "chiffre1 chiffre1 chiffre2 chiffre2"
+        "plus minus times div"
+        "equal equal reset reset"
+        "res res res res";
+    border: 2px solid rgb(24, 58, 11);
+    border-radius: 4px;
+}
+
+h3 {
+    padding: 3vh 6vh 2vh;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 1rem;
+    color: rgba(31, 6, 6, 0.925);
+    text-align: left;
+    position: relative;
+}
+
+#chiffre1 {
+    grid-area: chiffre1;
+}
+
+#chiffre2 {
+    grid-area: chiffre2;
+}
+
+#result {
+    grid-area: res;
+}
+
+#equal {
+    grid-area: equal;
+}
+
+#clear {
+    grid-area: reset;
+}
